@@ -12,3 +12,22 @@
 | emptyText |string   |数据为空时的提示|
 | noMore |boolean   |是否没有更多了|
 | noMoreText |string   |没有更多数据时的提示|
+| bind:onLoadMore |回调   |刷新时回调|
+| bind:onRefresh |回调   |加载更多时回调|
+
+```
+例：刷新&加载更多
+	onRefresh:function(e){
+		var callback = e.detail;
+		setTimeout(function(){
+			callback.success();
+		},3000)
+	},
+	onLoadMore: function (e) {
+		var callback = e.detail;
+		setTimeout(function () {
+			callback.fail();
+		}, 3000)
+	},
+
+```
