@@ -1,6 +1,8 @@
 # wapp_refreshView
 一个在微信小程序中使用的上下拉刷新组件
 
+小程序代码片段：wechatide://minicode/Iw0WABm37T2P
+
 参数：
 
 |参数名|类型|说明|
