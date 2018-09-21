@@ -26,10 +26,10 @@ onRefresh:function(e){
     },3000)
 },
 onLoadMore: function (e) {
-	var callback = e.detail;
-	setTimeout(function () {
-		callback.fail();
-	}, 3000)
+    var callback = e.detail;
+    setTimeout(function () {
+	callback.fail();
+    }, 3000)
 },
 
 ```
