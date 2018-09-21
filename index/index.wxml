@@ -1,0 +1,9 @@
+<view class='pageView'>
+	<view class='topView'>
+		头部
+	</view>
+
+	<listView class='listView_box' length='{{listData.length}}' emptyText='没有数据咯~' noMore='{{false}}' bind:onRefresh='onRefresh' bind:onLoadMore='onLoadMore'>
+		<view class='listView_itemView' wx:for='{{listData}}' wx:key='index'>{{item}}</view>
+	</listView>
+</view>

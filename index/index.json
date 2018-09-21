@@ -1,0 +1,6 @@
+{
+	"navigationBarTitleText": "下拉刷新",
+	"usingComponents": {
+		"listView": "/component/listView/listView"
+	}
+}

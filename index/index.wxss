@@ -1,0 +1,30 @@
+.pageView {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	background: #e5e5e5;
+}
+
+.topView {
+	width: 100vw;
+	height: 120rpx;
+	background: #fff;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.listView_box {
+	width: 100vw;
+	height: calc(100vh - 120rpx - 24rpx);
+	margin-top: 24rpx;
+	background: #fff;
+}
+
+.listView_itemView {
+	width: 100vw;
+	height: 120rpx;
+	border: solid 1rpx #e5e5e5;
+}

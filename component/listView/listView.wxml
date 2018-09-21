@@ -1,0 +1,39 @@
+<!--components/listView/listView.wxml-->
+<view class='listView_box custom-class' capture-bind:touchstart='touchStart' capture-bind:touchmove='touchMove' capture-catch:touchend='touchEnd'>
+    <scroll-view scroll-y='{{scrollY}}' class='listView_box' catchscrolltoupper='scrollTopListener' catchscrolltolower='scrollBottomListener' catchscroll='scrollListener' upper-threshold='0' lower-threshold='0'>
+        <!--头部-->
+        <view class='listView_box_header' style='height:{{headHeight}}rpx;line-height:{{headHeight}}rpx;margin-top:{{headMarginTop}}rpx;'>
+            <view wx:if='{{state == 1 || state == 2 || state == 3 || state == 6}}' class='refreshingView'>
+                <image wx:if='{{state == 1 || state == 2}}' class='dropDownImg' style='transform:rotate({{rotateAngle}}deg);' src='./icon_down.png'></image>
+                <text wx:if='{{state == 1}}'>下拉刷新</text>
+                <text wx:elif='{{state == 2}}'>松手立即刷新</text>
+                <block wx:elif='{{state == 3}}'>
+                    <image class=' refreshingView_img ' src='./icon_loading.png '></image>
+                    <text>正在刷新中...</text>
+                </block>
+                <text wx:elif='{{state == 6 && scrollToTop}} ' class='textColor_red '>加载失败</text>
+            </view>
+        </view>
+        <!--插入到自定义组件的内容-->
+        <view class='listView_box_content'>
+            <block wx:if='{{length != null && length > 0}}'>
+                <slot></slot>
+
+                <!--没有更多了-->
+                <view wx:if='{{noMore}}' class='noMoreView'>{{noMoreText}}</view>
+            </block>
+            <view wx:else class='emptyView'>{{emptyText}}</view>
+        </view>
+    </scroll-view>
+
+    <!--底部-->
+    <block wx:if='{{state == 5 || state == 6 && scrollToBottom}}'>
+        <view class='listView_box_footer'>
+            <view wx:if='{{state == 5}}' class='refreshingView'>
+                <image class='loadMoreRefresh_img' src='./icon_loading.png'></image>
+                <text>加载更多中...</text>
+            </view>
+            <text wx:if='{{state == 6}}' class='textColor_red'>加载失败</text>
+        </view>
+    </block>
+</view>
