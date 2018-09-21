@@ -19,17 +19,17 @@
 
 ```
 例：刷新&加载更多
-	onRefresh:function(e){
-		var callback = e.detail;
-		setTimeout(function(){
-			callback.success();
-		},3000)
-	},
-	onLoadMore: function (e) {
-		var callback = e.detail;
-		setTimeout(function () {
-			callback.fail();
-		}, 3000)
-	},
+onRefresh:function(e){
+    var callback = e.detail;
+    setTimeout(function(){
+	callback.success();
+    },3000)
+},
+onLoadMore: function (e) {
+	var callback = e.detail;
+	setTimeout(function () {
+		callback.fail();
+	}, 3000)
+},
 
 ```
