@@ -9,7 +9,7 @@
 |:-----  |:-----|-----                           |
 | custom-class | 自定义样式class-name | 自定义样式 |
 | refresh |boolean   |是否需要刷新|
-| loadMore |boolean   |蓝牙  0-无，1-有|
+| loadMore |boolean   |是否需要加载更多|
 | length |number   |数据长度|
 | emptyText |string   |数据为空时的提示|
 | noMore |boolean   |是否没有更多了|
