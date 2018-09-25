@@ -4,7 +4,7 @@
 小程序代码片段: wechatide://minicode/Iw0WABm37T2P 
 
 效果：
-123.gif
+![Alt text](https://github.com/dyl169/wapp_refreshView/blob/master/123.gif "效果图")
 
 参数：
 
