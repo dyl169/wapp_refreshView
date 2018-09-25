@@ -3,6 +3,9 @@
 
 小程序代码片段: wechatide://minicode/Iw0WABm37T2P 
 
+效果：
+123.gif
+
 参数：
 
 |参数名|类型|说明|
