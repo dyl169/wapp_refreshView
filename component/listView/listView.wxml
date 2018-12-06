@@ -1,5 +1,5 @@
 <!--components/listView/listView.wxml-->
-<view class='listView_box custom-class' capture-bind:touchstart='touchStart' capture-bind:touchmove='touchMove' capture-catch:touchend='touchEnd'>
+<view class='listView_box custom-class' capture-bind:touchstart='touchStart' capture-bind:touchmove='touchMove' capture-bind:touchend='touchEnd'>
     <scroll-view scroll-y='{{scrollY}}' class='listView_box' catchscrolltoupper='scrollTopListener' catchscrolltolower='scrollBottomListener' catchscroll='scrollListener' upper-threshold='0' lower-threshold='0'>
         <!--头部-->
         <view class='listView_box_header' style='height:{{headHeight}}rpx;line-height:{{headHeight}}rpx;margin-top:{{headMarginTop}}rpx;'>
